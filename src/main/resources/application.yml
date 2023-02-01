@@ -1,0 +1,26 @@
+app:
+  rest:
+    api:
+      prefix: /api
+
+anime-client:
+  url: "https://kitsu.io/api/edge/anime?filter[text]="
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/sergey
+    username: sergey
+    password: 123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
